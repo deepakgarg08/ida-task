@@ -33,29 +33,30 @@ public class ApplicationController {
 	@RequestMapping("/create") //query is keyword.... CREATE  
 	public String getQuery3(@RequestBody recordclazz reco ) throws FileNotFoundException {
 		
-		System.out.println(reco.getFirst());
-		System.out.println(reco.getLast());
+		System.out.println(reco.getUserName());
+		System.out.println(reco.getPassword());
 		//System.out.println(reco.getQry());
 	    
         // some definitions
-        //String personURI    = "http://somewhere/JohnSmith";
-	
-        String givenName    = reco.getFirst();
-        String familyName   = reco.getLast();
-        String fullName     = givenName + " " + familyName;
-        String personURI    = "http://userdata/"+fullName.replaceAll("\\s+","");
+		String userId =     reco.getId();
+        String userName    = reco.getUserName();
+        String password   = reco.getPassword();
+       // String fullName     = userName + " " + familyName;
+        String personURI    = "http://userdata/"+userName.replaceAll("\\s+","");
         // create an empty model
         Model model = ModelFactory.createDefaultModel();
 
-        // create the resource 
+        //   create the resource 
         //   and add the properties cascading style
         Resource rs 
-          = model.createResource(personURI)        		 
-                 .addProperty(VCARD.FN, fullName)
-                 .addProperty(VCARD.N, 
-                              model.createResource()                              	
-                                   .addProperty(VCARD.Given, givenName)
-                                   .addProperty(VCARD.Family, familyName));
+          = model.createResource(personURI)
+        		 .addProperty(VCARD.UID, userId)
+                 .addProperty(VCARD.NAME, userName)
+                 .addProperty(VCARD.Pcode, password);
+                 //.addProperty(VCARD.N, 
+                           //   model.createResource()                              	
+                               //    .addProperty(VCARD.Given, userName)
+                                 //  .addProperty(VCARD.Family, familyName));
         
         System.out.println("result set"+rs);
         // now write the model in XML form to a file
@@ -66,7 +67,7 @@ public class ApplicationController {
         	  model1.add(model);
         	  model1.write(fout,"RDF/XML");
             //model.write(System.out, "RDF/XML");
-		return fullName;
+		return "The userId, userName and Password are:"+userId +userName + password;
 	}
 	
 	@RequestMapping("/query_2") //query is keyword 
@@ -133,7 +134,7 @@ public class ApplicationController {
 //        } else {
 //            System.out.println("No vcards were found in the database");
 //        }
-		//return null; 
+//return null; 
 	}
 	
 	static final String inputFileName = "data3.rdf";
@@ -157,13 +158,17 @@ public class ApplicationController {
         Resource vcard = model.getResource(records.getQry());
         
         // retrieve the value of the N property
-        Resource name = (Resource) vcard.getRequiredProperty(VCARD.N)
-                                        .getObject();
+//        Resource name = (Resource) vcard.getRequiredProperty(VCARD.N)
+//                                        .getObject();        
         // retrieve the given name property
-        String fullName = vcard.getRequiredProperty(VCARD.FN)
+        String id = vcard.getRequiredProperty(VCARD.UID)
                                .getString();
-        System.out.println("The fullname is \"" + fullName + "\" ");
-		return fullName;
+        String username = vcard.getRequiredProperty(VCARD.NAME)
+                			   .getString();
+        String password = vcard.getRequiredProperty(VCARD.Pcode)
+        					   .getString();
+        System.out.println("The fullname is"  +id +username +password);
+		return "The userId, userName and Password are:"+id +username + password;
 	}
 		
 }

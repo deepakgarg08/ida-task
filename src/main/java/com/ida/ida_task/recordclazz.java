@@ -2,7 +2,7 @@ package com.ida.ida_task;
 
 public class recordclazz {
 	private String qry,endpt;
-//	private int id;
+	private String id;
 
 	public String getQry() {
 		return qry;
@@ -22,31 +22,32 @@ public class recordclazz {
 
 	//user data 
 	 
-//	public int getId() {
-//		return id;
-//	}
-//
-//	public void setId(int id) {
-//		this.id = id;
-//	}
-
-	private String first,last;
-
-	public String getFirst() {
-		return first;
+	public String getId() {
+		return id;
 	}
 
-	public void setFirst(String first) {
-		this.first = first;
+	public void setId(String id) {
+		this.id = id;
 	}
 
-	public String getLast() {
-		return last;
+	private String userName,password;
+
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setLast(String last) {
-		this.last = last;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	
 	
 }
