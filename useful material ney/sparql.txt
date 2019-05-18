@@ -1,0 +1,126 @@
+# Default graph ///delete operation
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ns: <http://example.org/ns#> .
+
+<http://example/book2> ns:price 42 .
+<http://example/book2> dc:title "David Copperfield" .
+<http://example/book2> dc:creator "Edmund Wells" .
+
+
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+DELETE DATA
+{
+  <http://example/book2> dc:title "David Copperfield" ;
+                         dc:creator "Edmund Wells" .
+}
+
+
+# Default graph
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ns: <http://example.org/ns#> .
+
+<http://example/book2> ns:price 42 .
+
+
+///# Default graph
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ns: <http://example.org/ns#> .
+
+<http://example/book1> ns:price 42 .
+
+
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+INSERT DATA
+{ 
+  <http://example/book1> dc:title "A new book" ;
+                         dc:creator "A.N.Other" .
+}
+
+
+
+# Default graph
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ns: <http://example.org/ns#> .
+
+<http://example/book1> ns:price 42 .
+<http://example/book1> dc:title "A new book" .
+<http://example/book1> dc:creator "A.N.Other" .
+
+https://www.w3.org/TR/sparql11-update/
+
+#######################################################
+//insert
+PREFIX dc: <http://www.w3.org/2001/vcard-rdf/3.0#>
+PREFIX ab:<http://userdata/#>
+INSERT DATA
+{ 
+  ab:deepakgarg dc:NAME "suraj" ;
+                dc:Pcode "321654" .
+}
+
+PREFIX dc: <http://www.w3.org/2001/vcard-rdf/3.0#>
+PREFIX ab:<http://userdata/#>
+INSERT DATA
+{ 
+  ab:suraj dc:name "suraj" ;
+    			dc:username "suraj@gmail.com" ; 
+                dc:password "321654" .
+}
+//for java
+"INSERT DATA{ab:"+name+" dc:name \""+name+"\"; dc:username \""+userName+"\" ; dc:password \""+password+"\" .}");
+
+//shortened
+PREFIX dc: <http://www.w3.org/2001/vcard-rdf/3.0#>
+PREFIX ab:<http://userdata/#>
+INSERT DATA{ab:suraj dc:name "suraj" ;dc:username "suraj@gmail.com";dc:password "321654" .}
+
+
+#######################################################
+//delete
+
+PREFIX dc: <http://www.w3.org/2001/vcard-rdf/3.0#>
+PREFIX ab:<http://userdata/#>
+DELETE DATA
+{
+  ab:deepakgarg dc:NAME "deepak" ;
+                dc:Pcode "123456" .
+}
+
+
+PREFIX dc: <http://www.w3.org/2001/vcard-rdf/3.0#>
+PREFIX ab:<http://userdata/#>
+DELETE DATA
+{
+  ab:wonderwoman dc:name "wonderwoman" ;
+                dc:password "123456" ;
+    			dc:username "wm@gmail.com".
+}
+
+
+//select or fetch
+
+PREFIX dc: <http://www.w3.org/2001/vcard-rdf/3.0#>
+prefix ab:<http://userdata/#> 
+select ?name ?username ?password 
+	where {   
+	  ab: wonderwoman
+      dc: name ?name ;
+      dc:password ?password ;
+      dc:username ?username .
+}
+
+//biigerversion
+
+
+prefix ab:<http://userdata/#wonderwoman> 
+select ?name ?username ?password 
+	where {   
+		ab: 
+      <http://www.w3.org/2001/vcard-rdf/3.0#name>
+                 ?name ;
+      <http://www.w3.org/2001/vcard-rdf/3.0#password>
+                 ?password ;
+      <http://www.w3.org/2001/vcard-rdf/3.0#username>
+                  ?username .
+}

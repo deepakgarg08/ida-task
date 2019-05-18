@@ -1,0 +1,45 @@
+<http://userdata/deepak>
+        <http://www.w3.org/2001/vcard-rdf/3.0#NAME>
+                "deepak" ;
+        <http://www.w3.org/2001/vcard-rdf/3.0#Pcode>
+                "123456" ;
+        <http://www.w3.org/2001/vcard-rdf/3.0#UID>
+                "10002" .
+<http://userdata/deepak>
+        <http://www.w3.org/2001/vcard-rdf/3.0#NAME>
+                "deepak" ;
+        <http://www.w3.org/2001/vcard-rdf/3.0#Pcode>
+                "123456" ;
+        <http://www.w3.org/2001/vcard-rdf/3.0#UID>
+                "10002" .
+
+<http://userdata/garg>
+        <http://www.w3.org/2001/vcard-rdf/3.0#NAME>
+                "garg" ;
+        <http://www.w3.org/2001/vcard-rdf/3.0#Pcode>
+                "123456" ;
+        <http://www.w3.org/2001/vcard-rdf/3.0#UID>
+                "10002" .
+<http://userdata/deepak>
+        <http://www.w3.org/2001/vcard-rdf/3.0#NAME>
+                "deepak" ;
+        <http://www.w3.org/2001/vcard-rdf/3.0#Pcode>
+                "123456" ;
+        <http://www.w3.org/2001/vcard-rdf/3.0#UID>
+                "10002" .
+
+<http://userdata/garg>
+        <http://www.w3.org/2001/vcard-rdf/3.0#NAME>
+                "garg" ;
+        <http://www.w3.org/2001/vcard-rdf/3.0#Pcode>
+                "123456" ;
+        <http://www.w3.org/2001/vcard-rdf/3.0#UID>
+                "10002" .
+
+<http://userdata/asjad>
+        <http://www.w3.org/2001/vcard-rdf/3.0#NAME>
+                "asjad" ;
+        <http://www.w3.org/2001/vcard-rdf/3.0#Pcode>
+                "123456" ;
+        <http://www.w3.org/2001/vcard-rdf/3.0#UID>
+                "10002" .

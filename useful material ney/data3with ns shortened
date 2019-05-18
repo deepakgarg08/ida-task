@@ -1,0 +1,16 @@
+<http://userdata/#naveen>
+        <http://www.w3.org/2001/vcard-rdf/3.0#NAME>
+                "naveen" ;
+        <http://www.w3.org/2001/vcard-rdf/3.0#Pcode>
+                "123456" .
+<http://userdata/#deepak>
+        <http://www.w3.org/2001/vcard-rdf/3.0#NAME>
+                "deepak" ;
+        <http://www.w3.org/2001/vcard-rdf/3.0#Pcode>
+                "123456" .
+
+@prefix ab:<http://userdata/#>
+@prefix xy: <http://www.w3.org/2001/vcard-rdf/3.0#>
+
+ab: name 'deepak'
+xy: Pcode '123456'

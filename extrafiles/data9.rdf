@@ -1,0 +1,23 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+  <rdf:Description rdf:about="http://userdata/asjad">
+    <vcard:Pcode>123456</vcard:Pcode>
+    <vcard:NAME>asjad</vcard:NAME>
+    <vcard:UID>10002</vcard:UID>
+  </rdf:Description>
+</rdf:RDF>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+  <rdf:Description rdf:about="http://userdata/asjad">
+    <vcard:Pcode>123456</vcard:Pcode>
+    <vcard:NAME>asjad</vcard:NAME>
+    <vcard:UID>10002</vcard:UID>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://userdata/deepak">
+    <vcard:Pcode>123456</vcard:Pcode>
+    <vcard:NAME>deepak</vcard:NAME>
+    <vcard:UID>23434324</vcard:UID>
+  </rdf:Description>
+</rdf:RDF>

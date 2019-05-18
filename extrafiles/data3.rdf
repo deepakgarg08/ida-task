@@ -1,0 +1,9 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+  <rdf:Description rdf:about="http://userdata/DEEPAK">
+    <vcard:UID>10002</vcard:UID>
+    <vcard:NAME>DEEPAK</vcard:NAME>
+    <vcard:Pcode>123456</vcard:Pcode>
+  </rdf:Description>
+</rdf:RDF>

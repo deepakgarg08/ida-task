@@ -8,6 +8,7 @@ public class IdaTaskApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(IdaTaskApplication.class, args);
+		System.out.println("service started..");
 	}
 
 }

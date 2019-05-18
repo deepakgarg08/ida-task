@@ -1,0 +1,46 @@
+#prefix ab: <http://www.w3.org/2001/vcard-rdf/3.0#>
+
+select ?n ?i ?p 
+	where {
+      <http://userdata/maqbool> 
+
+      <http://www.w3.org/2001/vcard-rdf/3.0#NAME>
+                 ?n ;
+      <http://www.w3.org/2001/vcard-rdf/3.0#Pcode>
+                  ?p ;
+      <http://www.w3.org/2001/vcard-rdf/3.0#UID>
+                  ?i .
+}
+
+
+
+
+
+
+
+
+
+prefix ab:<http://userdata/#deepak> 
+select ?name ?id ?password 
+	where {   
+		ab:
+      <http://www.w3.org/2001/vcard-rdf/3.0#NAME>
+                 ?name ;
+      <http://www.w3.org/2001/vcard-rdf/3.0#Pcode>
+                 ?password ;
+      <http://www.w3.org/2001/vcard-rdf/3.0#UID>
+                  ?id .
+}
+
+#SELECT ?name ?uid ?password
+#WHERE {
+# <http://www.w3.org/2001/vcard-rdf/3.0#NAME>?name ;
+#      <http://www.w3.org/2001/vcard-rdf/3.0#Pcode>?password ;
+#      <http://www.w3.org/2001/vcard-rdf/3.0#UID>?uid .
+#}
+#LIMIT 25
+
+prefix ab:<http://userdata/#wonderwoman> 
+prefix cd: <http://www.w3.org/2001/vcard-rdf/3.0#>
+select ?name ?username ?password 
+	where {ab: cd:name ?name ; cd:password ?password ; cd:username ?username .}

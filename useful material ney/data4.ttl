@@ -1,0 +1,25 @@
+@prefix dbr:   <http://dbpedia.org/resource/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+dbr:Peter_Ceffons  foaf:name  "Peter Ceffons"@en .
+
+dbr:Witold_Gerutto  foaf:name  "Witold Gerutto"@en .
+
+dbr:Nikolaos_Ventouras
+        foaf:name  "Nikolaos Ventouras"@en .
+
+dbr:Siniša_Žugić  foaf:name  "Siniša Žugic"@en .
+
+dbr:Megan_Lawrence  foaf:name  "Megan Lawrence"@en .
+
+dbr:Lorine_Livington_Pruette
+        foaf:name  "Lorine Livington Pruette"@en .
+
+dbr:Danilo_Tognon  foaf:name  "Danilo Tognon"@en .
+
+dbr:Andreas_Ekberg  foaf:name  "Andreas Ekberg"@en .
+
+<http://dbpedia.org/resource/William_Bagot,_2nd_Baron_Bagot>
+        foaf:name  "William Bagot, 2nd Baron Bagot"@en .
+
+dbr:Sani_ol_molk  foaf:name  "Mirza Abolhassan Khan Ghaffari"@en .
