@@ -44,3 +44,20 @@ prefix ab:<http://userdata/#wonderwoman>
 prefix cd: <http://www.w3.org/2001/vcard-rdf/3.0#>
 select ?name ?username ?password 
 	where {ab: cd:name ?name ; cd:password ?password ; cd:username ?username .}
+	
+	
+	
+	
+	
+//single select query
+
+
+prefix ab:<http://userdata/#batman> 
+prefix cd: <http://www.w3.org/2001/vcard-rdf/3.0#>
+select ?name ?id ?password 
+	where {   
+		ab:
+     	cd:name ?name ; 
+      	cd:password ?password ;    
+}
+

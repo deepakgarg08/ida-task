@@ -2,11 +2,21 @@ package com.ida.ida_task;
 
 public class UserData {
 	private String name;
-	private String username,password;
+	private String username,password,newpassword;
 	
 
 	public String getName() {
 		return name;
+	}
+
+
+	public String getNewpassword() {
+		return newpassword;
+	}
+
+
+	public void setNewpassword(String newpassword) {
+		this.newpassword = newpassword;
 	}
 
 
