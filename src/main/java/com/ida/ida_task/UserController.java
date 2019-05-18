@@ -32,9 +32,6 @@ public class UserController {
 		password = newHashPass;
 		System.out.println("SHA-256 HASH:" + password);
 
-//		System.out.println("name,    "+name);
-//		System.out.println("username   "+userName);
-//		System.out.println("password    "+password);
 		// In this variation, a connection is built each time.
 		try (RDFConnectionFuseki conn = (RDFConnectionFuseki) builder.build()) {
 
@@ -95,8 +92,6 @@ public class UserController {
 					+ "DELETE DATA\r\n" + "{\r\n" + "  ab:" + userName + "    dc:name \"" + name + "\" ;\r\n"
 					+ "                 dc:password \"" + password + "\" ;\r\n" + "}");
 			request.add("PREFIX dc: <http://www.w3.org/2001/vcard-rdf/3.0#>\r\n" + "PREFIX ab:<http://userdata/#>\r\n" +
-			// "INSERT DATA{ab:suraj dc:name \"susadfsdfasdfraj\" ;dc:username
-			// \"suraj@gmasdfil.com\";dc:password \"32sdf1654\" .}");
 					"INSERT DATA{ab:" + userName + " dc:name \"" + name + "\" ; dc:password \"" + newPassword + "\" .}");
 			conn.update(request);
 		}
@@ -121,7 +116,6 @@ public class UserController {
 
 	@RequestMapping("/selectb") // one by one
 	public String select2(@RequestBody UserData record) {
-		// String name = record.getName();
 		String userName = record.getUsername();
 		// In this variation, a connection is built each time.
 
@@ -142,7 +136,7 @@ public class UserController {
 			// return new String(outputStream.toByteArray());
 		}
 	}
-
+// password hashing
 	public static String hashPassword(String Pass) throws NoSuchAlgorithmException {
 		System.out.println("Hello world");
 
